@@ -41,8 +41,8 @@ namespace TestApi.Controllers
            ID = b.ID,
            Title = b.Title,
            Year = b.Year,
-           AuthorName = b.Author.Name,
-           Genre = b.Genre
+           Genre = b.Genre,
+           AuthorName = b.Author.Name
        }).SingleOrDefaultAsync(b => b.ID == id);
 
             if (book == null)

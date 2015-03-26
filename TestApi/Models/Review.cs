@@ -8,7 +8,6 @@ namespace TestApi.Models
     public class Review
     {
         public int ID { get; set; }
-        public int rating { get; set; }
         public string Comment { get; set; }
 
         public int BookID { get; set; }
