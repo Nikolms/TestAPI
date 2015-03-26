@@ -20,15 +20,17 @@ namespace TestApi.Controllers
         // GET: api/Books
         public IEnumerable<BookDTO> GetBooks()
         {
+            
             var books = from b in db.Books
                         select new BookDTO()
                         {
                             ID = b.ID,
                             Title = b.Title,
-                            AuthorName = b.Author.Name
+                            //AuthorName = b.Author.Name
                         };
 
             return books;
+            
         }
 
         // GET: api/Books/5

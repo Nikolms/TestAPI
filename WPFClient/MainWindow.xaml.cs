@@ -28,11 +28,6 @@ namespace WPFClient
         public MainWindow()
         {
             InitializeComponent();
-            textTitle.DataContext = currentSelection.Title;
-            textAuthor.DataContext = currentSelection.AuthorName;
-            textYear.DataContext = currentSelection.Year.ToString();
-            textGenre.DataContext = currentSelection.Genre;
-            
         }
 
         async void UpdateBookList() 
@@ -73,6 +68,11 @@ namespace WPFClient
                 if (response.IsSuccessStatusCode)
                 {
                     currentSelection = response.Content.ReadAsAsync<BookDetailDTO>().Result;
+
+                    textTitle.Text = currentSelection.Title;
+                    textAuthor.Text = currentSelection.AuthorName;
+                    textYear.Text = currentSelection.Year.ToString();
+                    textGenre.Text = currentSelection.Genre;
                 }
             }
             catch
@@ -100,6 +100,7 @@ namespace WPFClient
                 b = (Book)kirjaLista.SelectedItem;
                 GetDetails(b.ID);
             }
+
         }
     }
 

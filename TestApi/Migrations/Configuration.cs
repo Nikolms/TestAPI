@@ -27,6 +27,8 @@ namespace TestApi.Migrations
                 x => x.ID,
                 new Book() {ID = 1, Title= "Eka Kirja", Genre="Adventure", Year = 1999, AuthorID = 1 },
                 new Book() {ID = 2, Title= "Apua!", Genre = "Horror", Year = 2002, AuthorID = 2},
+                new Book() { ID = 2, Title = "Apua2!", Genre = "Horror", Year = 2004, AuthorID = 2 },
+                new Book() { ID = 2, Title = "Apua3!", Genre = "Horror", Year = 2006, AuthorID = 2 },
                 new Book() {ID = 3, Title= "Mun Tarina", Genre = "Self Bio", Year = 2014, AuthorID = 3}
                 );
             //  This method will be called after migrating to the latest version.
